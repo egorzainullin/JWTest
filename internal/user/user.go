@@ -1,5 +1,6 @@
 package user
 
-type User struct {
-	Guid string
+type UserElement struct {
+	Id        string
+	Encrypted string
 }
