@@ -15,13 +15,13 @@ import (
 	u "testjwt.com/internal/user"
 )
 
-const severUrl = "localhost:8080"
+const serverUrl = "localhost:8080"
 
 func main() {
 	router := gin.Default()
 	router.GET("/gen/:id", genTokensAndSave)
 	router.GET("refresh", refreshTokenAndSave)
-	router.Run(severUrl)
+	router.Run(serverUrl)
 }
 
 func getStorage() *mongo.Client {
